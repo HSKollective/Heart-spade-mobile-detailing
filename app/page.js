@@ -30,7 +30,7 @@ const packagePrices = {
   Jack: 120,
   Queen: 180,
   King: 260,
-  Ace: $$$,
+  Ace: 0, // coming soon
 };
 
 const vehicleFees = {
