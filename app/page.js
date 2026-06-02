@@ -121,7 +121,7 @@ const totalPrice =
           {[
             { name: "Jack Package", price: "$120", items: ["Wash", "Clay", "Seal"] },
             { name: "Queen Package", price: "$180", items: ["Wash", "Clay", "Seal", "Interior clean"] },
-            { name: "King Package", price: "$", items: ["Deep wash", "Interior detail", "Trim restore"] },
+            { name: "King Package", price: "$260", items: ["Deep wash", "Interior detail", "Trim restore"] },
             { name: "Ace Package", price: "coming soon", items: ["coming soon"] }
           ].map((pkg, i) => (
             <div key={i} className="bg-zinc-900 p-8 rounded-3xl border border-white/10">
