@@ -1,17 +1,17 @@
 import "./globals.css";
-import { Inter, Lobster } from "next/font/google";
+import { Inter, Cormorant_Garamond } from "next/font/google";
 
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-inter",
+  variable: "--font-body",
 });
 
-const lobster = Lobster({
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: "400",
   display: "swap",
   variable: "--font-title",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata = {
@@ -21,8 +21,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${inter.variable} ${lobster.variable}`}>
-      <body className="bg-black text-white" style={{ fontFamily: "var(--font-inter, Inter, ui-sans-serif, system-ui, sans-serif)" }}>
+    <html lang="en" className={`${inter.variable} ${cormorant.variable}`}>
+      <body className="bg-black text-white">
         {children}
       </body>
     </html>

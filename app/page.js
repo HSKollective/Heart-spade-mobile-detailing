@@ -79,17 +79,9 @@ export default function Page() {
         {/* Content */}
         <div className="relative z-10 max-w-5xl mx-auto px-6">
           {/* Title with Lowrider-style font */}
-<h1
-  className="text-5xl lg:text-7xl font-bold mb-6"
-  style={{ fontFamily: "var(--font-title, Lobster, cursive)" }}
->
+<h1 className="text-5xl lg:text-7xl font-semibold mb-6 font-title tracking-wide">
   Heart & Spade
-  <span
-    className="block text-red-500"
-    style={{ fontFamily: "var(--font-title, Lobster, cursive)" }}
-  >
-    Mobile Detailing
-  </span>
+  <span className="block text-red-500 font-title">Mobile Detailing</span>
 </h1>
 
           <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-8">
@@ -141,9 +133,9 @@ export default function Page() {
 
       {/* PRICING */}
       <section id="pricing" className="max-w-7xl mx-auto px-6 py-24">
-        <h2 className="text-4xl font-bold text-center mb-12 font-title">
-          Pricing Packages
-        </h2>
+<h2 className="text-4xl font-semibold text-center mb-12 font-title">
+  Pricing Packages
+</h2>
 
         <div className="grid md:grid-cols-4 gap-8">
           {[
