@@ -65,13 +65,13 @@ export default function Page() {
         </div>
 
         {/* Background image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-25"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1517935706155-2717063c2225?q=80&w=2070&auto=format&fit=crop')",
-          }}
-        />
+<div
+  className="absolute inset-0 bg-cover bg-center opacity-25"
+  style={{
+    backgroundImage:
+      "url('https://images.unsplash.com/photo-1517935706155-2717063c2225?q=80&w=2070&auto=format&fit=crop')",
+  }}
+/>
 
         {/* Dark gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-red-900/30 via-black/70 to-black" />
