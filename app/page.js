@@ -58,79 +58,82 @@ export default function Page() {
   return (
     <div className="min-h-screen bg-black text-white font-body">
       {/* HERO */}
-      <section className="relative overflow-hidden min-h-screen flex items-center justify-center text-center">
-        {/* Subtle animated overlay */}
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-blue-200/5 to-transparent animate-pulse" />
-        </div>
+    <section className="relative overflow-hidden min-h-screen flex items-center justify-center text-center">
+  {/* Background image */}
+  <div
+    className="absolute inset-0 bg-cover bg-center scale-105"
+    style={{
+      backgroundImage:
+        "url('https://images.unsplash.com/photo-1517935706155-2717063c2225?q=80&w=2070&auto=format&fit=crop')",
+    }}
+  />
 
-        {/* Background image */}
-<div
-  className="absolute inset-0 bg-cover bg-center opacity-25"
-  style={{
-    backgroundImage:
-      "url('https://images.unsplash.com/photo-1517935706155-2717063c2225?q=80&w=2070&auto=format&fit=crop')",
-  }}
-/>
+  {/* Dark cinematic overlay */}
+  <div className="absolute inset-0 bg-black/55" />
 
-        {/* Dark gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-red-900/30 via-black/70 to-black" />
+  {/* Luxury red glow */}
+  <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/55 to-black" />
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(140,0,0,0.20),transparent_45%)]" />
 
-        {/* Content */}
-        <div className="relative z-10 max-w-5xl mx-auto px-6">
-          {/* Title with Lowrider-style font */}
-<h1 className="text-5xl lg:text-7xl font-semibold mb-6 font-title tracking-wide">
-  Heart & Spade
-  <span className="block text-red-500 font-title">Mobile Detailing</span>
-</h1>
+  {/* Subtle bottom fade for depth */}
+  <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black to-transparent" />
 
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-8">
-            We bring showroom-level detailing directly to your driveway.
-          </p>
+  {/* Content */}
+  <div className="relative z-10 max-w-5xl mx-auto px-6">
+    <p className="uppercase tracking-[0.35em] text-sm text-zinc-300 mb-4">
+      Toronto Mobile Detailing
+    </p>
 
-          {/* Location */}
-          <div className="mb-8 text-gray-400">
-            {location ? (
-              <p className="text-sm">
-                Detected Location: {location.lat}, {location.lng}
-              </p>
-            ) : (
-              <button
-                onClick={getLocation}
-                className="text-red-400 hover:text-red-300 underline transition-colors"
-              >
-                Detect My Location
-              </button>
-            )}
-          </div>
+    <h1 className="text-5xl lg:text-7xl font-semibold mb-6 font-title tracking-wide leading-tight">
+      Heart & Spade
+      <span className="block text-red-600 font-title">Mobile Detailing</span>
+    </h1>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-wrap justify-center gap-4">
-            <button
-              onClick={() =>
-                document.getElementById("pricing").scrollIntoView({
-                  behavior: "smooth",
-                })
-              }
-              className="px-14 py-6 rounded-2xl bg-red-600 hover:bg-red-500 text-xl font-bold shadow-2xl shadow-red-600/30 transition-all hover:scale-105"
-            >
-              Start Your Quote
-            </button>
+    <p className="text-zinc-200 text-lg md:text-xl max-w-2xl mx-auto mb-8 leading-relaxed">
+      Premium mobile detailing for drivers who want a cleaner, sharper,
+      showroom-level finish without leaving home.
+    </p>
 
-            <button
-              onClick={() =>
-                document.getElementById("booking").scrollIntoView({
-                  behavior: "smooth",
-                })
-              }
-              className="px-8 py-5 rounded-2xl border border-white/20 hover:border-red-500 hover:text-red-400 transition-all hover:scale-105"
-            >
-              Book Appointment
-            </button>
-          </div>
-        </div>
-      </section>
+    <div className="mb-8 text-zinc-400">
+      {location ? (
+        <p className="text-sm">
+          Detected Location: {location.lat}, {location.lng}
+        </p>
+      ) : (
+        <button
+          onClick={getLocation}
+          className="underline text-red-400 hover:text-red-300 transition-colors"
+        >
+          Detect My Location
+        </button>
+      )}
+    </div>
 
+    <div className="flex flex-wrap justify-center gap-4">
+      <button
+        onClick={() =>
+          document.getElementById("pricing")?.scrollIntoView({
+            behavior: "smooth",
+          })
+        }
+        className="px-10 py-5 rounded-2xl bg-red-700 hover:bg-red-600 text-lg font-semibold shadow-xl shadow-red-950/40 transition-all hover:scale-105"
+      >
+        Start Your Quote
+      </button>
+
+      <button
+        onClick={() =>
+          document.getElementById("booking")?.scrollIntoView({
+            behavior: "smooth",
+          })
+        }
+        className="px-8 py-5 rounded-2xl border border-white/20 bg-white/5 backdrop-blur-sm hover:border-red-500 hover:text-red-300 transition-all hover:scale-105"
+      >
+        Book Appointment
+      </button>
+    </div>
+  </div>
+</section>
       {/* PRICING */}
       <section id="pricing" className="max-w-7xl mx-auto px-6 py-24">
 <h2 className="text-4xl font-semibold text-center mb-12 font-title">
